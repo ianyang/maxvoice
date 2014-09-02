@@ -1,0 +1,28 @@
+<header class="grid-100">
+    <a href="/" class="logo">
+        Let the World Hear You
+    </a>
+
+    <a class="btn btn-primary"
+        ng-click="submitForm()">
+        Confirm
+    </a>
+</header>
+
+<div class="grid-100 grid-parent site-container">
+    <div class="grid-container">
+        <form name="newPostForm" class="grid-100 grid-parent" ng-submit="submitForm()">
+            <fieldset class="grid-100 grid-parent">
+                <input type="text" ng-model="newPost.title" placeholder="Title" required/>
+            </fieldset>
+
+            <fieldset class="grid-100 grid-parent">
+                <input type="text" ng-model="newPost.author" placeholder="by" required/>
+            </fieldset>
+
+            <fieldset class="grid-100 grid-parent">
+                <textarea ng-model="newPost.content" placeholder="Write here" required/>
+            </fieldset>
+        </form>
+    </div>
+</div>

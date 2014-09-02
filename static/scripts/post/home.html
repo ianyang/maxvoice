@@ -1,0 +1,29 @@
+<header class="grid-100">
+    <a href="/" class="logo">
+        Let the World Hear You
+    </a>
+
+    <a href="/create" class="btn btn-primary hide-on-mobile">
+        Post Anonymously
+    </a>
+</header>
+
+<div class="grid-100 grid-parent site-container">
+    <div class="grid-container">
+        <a class="grid-100 grid-parent post-list-item"
+            ng-href="/{{ post.id }}"
+            ng-repeat="post in posts track by $index">
+            <div class="text-h5 text-black post-list-title grid-100 grid-parent">
+                {{ post.title }}
+            </div>
+
+            <p class="text-p3 text-grey post-list-author grid-100 grid-parent">
+                by {{ post.author }}
+            </p>
+
+            <p class="text-p3 text-black post-list-snippet grid-100 grid-parent">
+                {{ post.content }}
+            </p>
+        </a>
+    </div>
+</div>

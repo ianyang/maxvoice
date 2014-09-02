@@ -1,0 +1,121 @@
+.modal-backdrop {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #444444;
+    background: rgba(68,68,68,0);
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    padding: 0 12px;
+
+    -webkit-transition: all 0.15s linear;
+       -moz-transition: all 0.15s linear;
+        -ms-transition: all 0.15s linear;
+         -o-transition: all 0.15s linear;
+            transition: all 0.15s linear;
+}
+
+.modal-backdrop * {
+    opacity: 0;
+}
+
+.modal-backdrop.active {
+    background: rgba(68,68,68,0.8);
+    visibility: visible;
+}
+
+.modal-backdrop.active * {
+    opacity: 1;
+}
+
+.modal-dialog {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    padding: 20px;
+    position: relative;
+    margin: 240px auto 0 auto;
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+.modal-header img {
+    width: 24px;
+    position: absolute;
+    right: -32px;
+    top: -32px;
+    cursor: pointer;
+}
+
+.modal-content {
+
+    overflow: hidden;
+}
+
+.tooltip-container {
+    display: inline-block;
+    width: 16px;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.tooltip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background: #d8d8d8;
+    text-align: center;
+    margin-left: 4px;
+    font-weight: 700;
+    cursor: pointer;
+
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.tooltip-container:hover .tooltip-icon {
+    background: #999999;
+}
+
+.tooltip-container:hover .tooltip-popup,
+.tooltip-popup:hover {
+    visibility: visible;
+}
+
+.tooltip-popup {
+    visibility: hidden;
+    padding: 12px;
+    background: #999999;
+    position: absolute;
+    left: -80px;
+    top: 24px;
+    width: 240px;
+    text-align: left;
+    margin-top: 2px;
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+.tooltip-popup:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #999999;
+
+    left: 83px;
+    top: -8px;
+}

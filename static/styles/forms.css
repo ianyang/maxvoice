@@ -1,0 +1,323 @@
+fieldset {
+	margin: 12px 0 0 0;
+	padding: 0;
+	border: none;
+}
+
+input,
+select,
+textarea {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+	line-height: 14px;
+    font-weight: 400;
+	color: #333333;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+	background: #ffffff;
+	padding: 12px;
+	width: 100%;
+	height: 40px;
+
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-ms-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+
+textarea {
+	height: 320px;
+}
+
+select {
+	background: #ffffff url("/static/images/forms/icon-arrow-select@2x.png") no-repeat right 12px center;
+	background-size: 12px;
+	padding-right: 28px;
+}
+
+fieldset label {
+	font-size: 12px;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 8px;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+	display: none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	padding-left: 36px;
+	padding-top: 2px;
+	font-size: 14px;
+	height: 24px;
+	display: inline-block;
+	margin-top: 8px;
+
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-ms-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+
+input[type="checkbox"] + label{
+	background: url(/static/images/forms/icon-checkbox.png) no-repeat center left;
+	background-size: 24px;
+}
+
+input[type="checkbox"] + label:hover {
+	background: url(/static/images/forms/icon-checkbox-hover@2x.png) no-repeat center left;
+	background-size: 24px;
+}
+
+input[type="checkbox"]:checked + label{
+	background:url(/static/images/forms/icon-checkbox-active@2x.png) no-repeat center left;
+	background-size: 24px;
+}
+
+input[type="radio"] + label {
+	background:url(/static/images/forms/icon-radio@2x.png) no-repeat top left;
+	background-size: 24px;
+}
+
+input[type="radio"] + label:hover {
+	background:url(/static/images/forms/icon-radio-hover@2x.png) no-repeat top left;
+	background-size: 24px;
+}
+
+input[type="radio"]:checked + label {
+	background:url(/static/images/forms/icon-radio-active@2x.png) no-repeat top left;
+	background-size: 24px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline-color: transparent;
+	outline-style: none;
+	border: 1px solid #3b99c7;
+	background: #ffffff;
+	box-shadow: none;
+}
+
+select:focus {
+	background: #ffffff url("/static/images/forms/icon-arrow-select@2x.png") no-repeat right 12px center;
+	background-size: 12px;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+	background: #f8f8f8;
+}
+
+select:disabled {
+	background: #f8f8f8 url("/static/images/forms/icon-arrow-select@2x.png") no-repeat right 12px center;
+	background-size: 12px;
+}
+
+p.placeholder {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #999999;
+	position: absolute;
+	left: 22px;
+	top: 36px;
+	z-index: 100;
+	pointer-events: none;
+}
+
+::-webkit-input-placeholder {
+    font-size: 14px;
+	line-height: 20px;
+    font-weight: 400;
+	color: #999999;
+}
+
+:-moz-placeholder {
+    font-size: 14px;
+	line-height: 20px;
+    font-weight: 400;
+	color: #999999;
+}
+
+::-moz-placeholder {
+    font-size: 14px;
+	line-height: 20px;
+    font-weight: 400;
+	color: #999999;
+}
+
+body input[type=text]:-ms-input-placeholder,
+body input[type=number]:-ms-input-placeholder,
+body input[type=email]:-ms-input-placeholder,
+body input[type=password]:-ms-input-placeholder {
+    font-size: 14px;
+	line-height: 20px;
+    font-weight: 400;
+	color: #999999;
+}
+
+:-ms-input-placeholder {
+    font-size: 14px;
+	line-height: 20px;
+    font-weight: 400;
+	color: #999999;
+}
+
+::-ms-clear {
+    display: none;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+
+/*Error Feedback*/
+
+input.input-error {
+	background: #fdf5f3;
+	color: #dc5035;
+	border: 1px solid #e55d3a;
+	box-shadow: none;
+}
+
+.input-error::-webkit-input-placeholder {
+   color: #dc5035;
+}
+
+.input-error:-moz-placeholder { /* Firefox 18- */
+   color: #dc5035;
+}
+
+.input-error::-moz-placeholder {  /* Firefox 19+ */
+   color: #dc5035;
+}
+
+.input-error:-ms-input-placeholder {
+   color: #dc5035;
+}
+
+.input-error-feedback {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #dc5035;
+}
+
+.notification-error {
+	background: #fdf5f3 url("/static/images/forms/icon-expired@2x.png") no-repeat right 12px center;
+	background-size: 16px;
+	color: #dc5035;
+	border: 1px solid #e55d3a;
+	padding: 12px 28px 12px 12px;
+	font-size: 14px;
+	cursor: pointer;
+
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
+}
+
+/*Dropdowns*/
+
+.select-dropdown {
+	position: absolute;
+	top: 65px;
+	left: 0;
+	z-index: 1000;
+	min-width: 240px;
+	max-width: 90%;
+	margin: 0 12px;
+	padding: 0;
+	font-size: 14px;
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
+
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+	overflow: hidden;
+}
+
+.select-dropdown li {
+	width: 100%;
+	height: 40px;
+}
+
+.select-dropdown li a {
+	width: 100%;
+	display: block;
+	padding: 0 12px;
+	line-height: 40px;
+	height: 40px;
+	color: #333333;
+	cursor: pointer;
+	overflow: hidden;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.select-dropdown li a.active,
+.select-dropdown li a:hover,
+.select-dropdown li a:focus {
+	background: #3b99c7;
+	color: #ffffff;
+}
+
+.select-dropdown li a strong {
+	font-weight: 500;
+}
+
+.select-dropdown li a.bottom-option,
+.select-dropdown li a.bottom-option:hover,
+.select-dropdown li a.bottom-option:focus {
+	background: none;
+	color: #5296b9;
+	border-top: 1px solid #e5e5e5;
+}
+
+
+/*Other Form Components*/
+
+.form-footer {
+	margin-top: 32px;
+}
+
+/*Combo fieldset*/
+
+fieldset.combo .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-border-radius: 0 2px 2px 0;
+	   -moz-border-radius: 0 2px 2px 0;
+	        border-radius: 0 2px 2px 0;
+}
+
+fieldset.combo input {
+	padding-right: 30%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 719px) {
+	.form-footer .btn {
+		margin-top: 32px;
+		width: 100%;
+	}
+}

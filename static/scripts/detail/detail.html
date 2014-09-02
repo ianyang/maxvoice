@@ -1,0 +1,32 @@
+<header class="grid-100">
+    <a href="/" class="logo">
+        Let the World Hear You
+    </a>
+
+    <a class="btn btn-secondary hide-on-mobile"
+        ng-click="deletePost()">
+        Delete
+    </a>
+</header>
+
+<div class="grid-100 grid-parent site-container detail-container">
+    <div class="grid-100 detail-hero">
+        <div class="text-h3 text-black text-center grid-100 grid-parent">
+            {{ post.title }}
+        </div>
+
+        <p class="text-p2 text-grey text-center grid-100 grid-parent">
+            Posted {{ post.created }} by <strong>{{ post.author }}</strong>
+        </p>
+
+        <p class="text-p3 posted-date">
+
+        </p>
+    </div>
+
+    <div class="grid-container">
+        <p class="text-p3 text-black post-content grid-100 grid-parent">
+            {{ post.content }}
+        </p>
+    </div>
+</div>
