@@ -46,10 +46,8 @@ MaxVoice.config(['$routeProvider', '$httpProvider', '$locationProvider',
     }
 ]);
 
-MaxVoice.run(['$rootScope',
-    function($rootScope) {
+MaxVoice.run(['$http',
+    function($http) {
         console.log("Maximize Your Voice");
-
-
     }
 ]);

@@ -9,15 +9,19 @@
     </a>
 </header>
 
-<div class="grid-100 grid-parent site-container">
+<div class="grid-100 grid-parent site-container create-post-container">
     <div class="grid-container">
+        <div class="grid-100 notification-error" ng-show="formError">
+            {{ formError }}
+        </div>
+
         <form name="newPostForm" class="grid-100 grid-parent" ng-submit="submitForm()">
             <fieldset class="grid-100 grid-parent">
                 <input type="text" ng-model="newPost.title" placeholder="Title" required/>
             </fieldset>
 
             <fieldset class="grid-100 grid-parent">
-                <input type="text" ng-model="newPost.author" placeholder="by" required/>
+                <input type="text" ng-model="newPost.author" placeholder="Author" required/>
             </fieldset>
 
             <fieldset class="grid-100 grid-parent">

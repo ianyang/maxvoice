@@ -11,7 +11,6 @@ urlpatterns = patterns('posts.views',
 
     # API routes
     url(r'^api/posts$', 'index'),
-    url(r'^api/posts/create$', 'create'),
     url(r'^api/posts/(?P<post_id>\d+)$', 'detail'),
 )
 

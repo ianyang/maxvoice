@@ -1,6 +1,7 @@
 from django.template import Context, loader
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse
+from django.utils import timezone
 from posts.models import Post
 import json
 
@@ -10,17 +11,30 @@ def public(request):
 
 
 def index(request):
-    posts = Post.objects.order_by('-create_date')
-    response = {
-        'Success': True,
-        'Data': [post.to_dict_snippet() for post in posts]
-    }
+    # Getting all the posts
+    if request.method == 'GET':
+        posts = Post.objects.order_by('-create_date')
+        response = {
+            'Success': True,
+            'Data': [post.to_dict_snippet() for post in posts]
+        }
 
-    return HttpResponse(json.dumps(response), content_type="application/json")
+        return HttpResponse(json.dumps(response), content_type="application/json")
+
+    else:
+        p = Post(title = request.POST['title'], content = request.POST['content'],
+            author = request.POST['author'], create_date=timezone.now())
+        p.save()
+
+        response = {
+            'Success': True,
+            'Data': p.id
+        }
+
+        return HttpResponse(json.dumps(response), content_type="application/json")
 
 
 def detail(request, post_id):
-
     # Getting details of a post
     if request.method == 'GET':
         try:
@@ -45,9 +59,3 @@ def detail(request, post_id):
         response = { 'Success': True }
 
         return HttpResponse(json.dumps(response), content_type="application/json")
-
-
-def create(request):
-
-    print('create')
-    return HttpResponse(json.dumps('response'), content_type="application/json")
