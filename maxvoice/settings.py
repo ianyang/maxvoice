@@ -57,15 +57,15 @@ WSGI_APPLICATION = 'maxvoice.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 import dj_database_url
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'maxvoice',
-#         'USER': 'ian',
-#         'PASSWORD': '',
-#         'HOST': ''
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'maxvoice',
+        'USER': 'ian',
+        'PASSWORD': '',
+        'HOST': ''
+    }
+}
 
 DATABASES['default'] =  dj_database_url.config()
 
